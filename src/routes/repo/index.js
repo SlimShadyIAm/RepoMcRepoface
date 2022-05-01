@@ -64,9 +64,9 @@ const Repo = ({ repoUrl, manager }) => {
 
 	if (manager !== undefined) {
 		manager = manager.toLowerCase()
-		window.location = `${repoFormats[manager]}${repoUrl}`
+		window.location = `${repoFormats[manager].urlFormat}${repoUrl}`
 		return (
-			<div class={style.success}>Redirecting you to <a href={`${repoFormats[manager]}${repoUrl}`}>{repoFormats[manager]}{repoUrl}</a>... (click if it didn't work)</div>
+			<div class={style.success}>Redirecting you to <a href={`${repoFormats[manager].urlFormat}${repoUrl}`}>{repoFormats[manager].urlFormat}{repoUrl}</a>... (click if it didn't work)</div>
 		)
 	}
 
@@ -78,7 +78,7 @@ const Repo = ({ repoUrl, manager }) => {
 					currentTarget.src = "https://media.discordapp.net/attachments/947340203100635249/947387894098718740/Subtract.png";
 				}} class={style.repoIcon}></img>
 				{Object.keys(repoFormats).map(thisManager => (
-					<div class={style.repoButton} href={`${repoFormats[thisManager].urlFormat}${repoUrl}`} style={{ backgroundColor: repoFormats[thisManager].color }}><img src={repoFormats[thisManager].iconUrl} class={style.icon}></img><p class={style.text}>Add to {capitalize(thisManager)}</p></div>
+					<a class={style.repoButton} href={`${repoFormats[thisManager].urlFormat}${repoUrl}`} style={{ backgroundColor: repoFormats[thisManager].color }}><img src={repoFormats[thisManager].iconUrl} class={style.icon}></img><p class={style.text}>Add to {capitalize(thisManager)}</p></a>
 				))}
 			</div>
 		</div>
