@@ -8,17 +8,16 @@ const Home = () => {
 
 	return (
 		<div class={style.home}>
-			<h1>Home</h1>
-			<form onSubmit={(e) => {
+			<h1 class={style.title}>Repo McRepoface</h1>
+			<h2 class={style.subtitle}>Sharable links for jailbreak tweak repositories</h2>
+			<form class={style.form} onSubmit={(e) => {
 				e.preventDefault()
 				route(`/repo/?repoUrl=${repo}`)
 			}}>
-				<label>
-					Input the name of the repo:
-					<input type="text" name="name" onInput={e => setRepo(e.target.value)} value={repo} />
-				</label>
-				<input type="submit" value="submit" />
+				<input class={style.field} type="text" name="name" onInput={e => setRepo(e.target.value)} value={repo} />
+				<input class={style.submit} type="submit" value="submit" />
 			</form>
+			<p class={style.plug}>By <a href="https://github.com">SlimShadyIAm</a></p>
 		</div>
 	)
 }
