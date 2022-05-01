@@ -59,3 +59,18 @@
 .text {
 	flex-grow: 1;
 }
+
+.repoIcon {
+	width: 96px;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.inner {
+		width: 80%;
+	}
+
+	.text {
+		font-weight: 400;
+	}
+}
