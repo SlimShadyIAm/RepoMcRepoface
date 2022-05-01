@@ -17,7 +17,7 @@ const Home = () => {
 				<input class={style.field} type="text" name="name" placeholder='https://...' onInput={e => setRepo(e.target.value)} value={repo} />
 				<input class={style.submit} type="submit" value="submit" />
 			</form>
-			<p class={style.plug}>By <a href="https://github.com">SlimShadyIAm</a></p>
+			<p class={style.plug}>By <a href="https://github.com/SlimShadyIAm">SlimShadyIAm</a></p>
 		</div>
 	)
 }
