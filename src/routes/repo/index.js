@@ -24,11 +24,6 @@ const Repo = ({ repoUrl, manager }) => {
 			urlFormat: 'installer://add/',
 			color: "#2f91c2",
 			iconUrl: "https://media.discordapp.net/attachments/947346851185700884/970434676261019668/Installer_5.png",
-		},
-		saily: {
-			urlFormat: 'apt-repo://',
-			color: "#137abf",
-			iconUrl: "https://images-ext-2.discordapp.net/external/qeKD12ynMysn5VYBFcX5TbS4dFymOzqpzBFrRvr6j6s/%3Fsize%3D128%26quality%3Dlossless/https/cdn.discordapp.com/emojis/934683783058292736.webp",
 		}
 	}
 
